@@ -16,31 +16,34 @@
         android:text="Add"
         android:backgroundTint="#0452D8"/>
 
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_above="@id/addButton"
-        android:layout_marginLeft="30dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/grey"
-        android:hint="Name"
-        android:textAlignment="center"
-        android:textColorHint="@color/white"
-        android:importantForAutofill="no" />
+        android:layout_marginBottom="5dp">
 
-    <EditText
-        android:id="@+id/etNumber"
-        android:layout_width="238dp"
-        android:layout_height="40dp"
-        android:layout_above="@id/addButton"
-        android:layout_alignLeft="@+id/etName"
-        android:layout_marginLeft="110dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/grey"
-        android:inputType="phone"
-        android:hint="Phone Number"
-        android:textAlignment="center"
-        android:textColorHint="@color/white" />
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@color/grey"
+            android:hint="Name"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            android:importantForAutofill="no"/>
+
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="238dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/etName"
+            android:layout_marginLeft="10dp"
+            android:background="@color/grey"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textAlignment="center"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
 
 </RelativeLayout>
