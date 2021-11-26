@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <Button
+        android:id="@+id/instruction"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:backgroundTint="#0452D8"
+        android:text="Instruction"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/instruction_icon"
+        app:iconSize="25dp"
+        app:iconTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/registerNumber"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/instruction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#0452D8"
+        android:text="Register Number"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/add_number"
+        app:iconSize="25dp"
+        app:iconTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/viewNumber"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/registerNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#0452D8"
+        android:text="View Number"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/view_number"
+        app:iconSize="25dp"
+        app:iconTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/editMesage"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/viewNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#0452D8"
+        android:text="Edit Message"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/edit_message"
+        app:iconGravity="start"
+        app:iconSize="30dp"
+        app:iconTint="#FFFFFF" />
+
+</RelativeLayout>
