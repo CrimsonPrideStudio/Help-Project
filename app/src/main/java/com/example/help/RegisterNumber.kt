@@ -23,12 +23,13 @@ var name:String = "Def"
         etName = findViewById(R.id.etName)
         etNumber = findViewById(R.id.etNumber)
         registerBtn = findViewById(R.id.addButton)
-        val contactEntity = ContactEntity(
-            3,
-            etName.text.toString(),
-            etNumber.text.toString()
-        )
+
         registerBtn.setOnClickListener {
+            val contactEntity = ContactEntity(
+                2,
+                etName.text.toString(),
+                etNumber.text.toString()
+            )
             if(!DBAsyncTask(this,contactEntity,1).execute().get()){
                 val async = DBAsyncTask(this,contactEntity,2).execute()
                 Log.e("this",contactEntity.toString())
@@ -41,7 +42,7 @@ var name:String = "Def"
         override fun doInBackground(vararg params: Void?): Boolean {
           when(mode){
               1->{
-                  val contact: ContactEntity =db.contactDao().getContactById(contactsEntity.person_id.toString())
+                  val contact: ContactEntity =db.contactDao().getContactById(contactsEntity.person_id)
                   db.close()
                   return contact!=null
               }

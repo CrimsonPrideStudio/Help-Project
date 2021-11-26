@@ -17,5 +17,5 @@ fun deleteContact(contactEntity: ContactEntity)
 fun getAllContacts():List<ContactEntity>
 
 @Query("SELECT * FROM Contacts WHERE person_id=:PersonID")
-fun getContactById(PersonID:String):ContactEntity
+fun getContactById(PersonID: Int):ContactEntity
 }
