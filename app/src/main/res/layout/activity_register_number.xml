@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:text="Add"
-        android:backgroundTint="#0452D8"/>
+        android:backgroundTint="@color/blue"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
