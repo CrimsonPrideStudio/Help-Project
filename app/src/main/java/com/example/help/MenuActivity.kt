@@ -50,7 +50,7 @@ class MenuActivity : AppCompatActivity() {
             dialog.setCancelable(false).setPositiveButton("Add"){text,listener->
                 registerNumber(userName.text.toString(),userNumber.text.toString())
             }
-dialog.create()
+            dialog.create()
             dialog.show()
 
 
@@ -65,14 +65,15 @@ dialog.create()
         }
     }
 fun registerNumber(userName:String,userNumber:String){
+    contactDbList = DBAsyncInfo(this).execute().get()
     val contactEntity = ContactEntity(
         contactDbList.size+1,
         userName.toString(),
         userNumber.toString()
     )
 
-    if(!MenuActivity.DBAsyncTask(this, contactEntity, 1).execute().get()){
-        val async = MenuActivity.DBAsyncTask(this, contactEntity, 2).execute()
+    if(!DBAsyncTask(this, contactEntity, 1).execute().get()){
+        val async = DBAsyncTask(this, contactEntity, 2).execute()
         Log.e("this",contactEntity.toString())
     }
 }

@@ -27,6 +27,12 @@ recyclerView = findViewById(R.id.recyclerView)
         recyclerAdapter = NumberRecyclerAdaptar(this,contactDbList)
         recyclerView.adapter = recyclerAdapter
         recyclerView.layoutManager = layoutManager
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        finish()
     }
     class DBAsyncTask(val context: Context):
         AsyncTask<Void, Void, List<ContactEntity>>(){
