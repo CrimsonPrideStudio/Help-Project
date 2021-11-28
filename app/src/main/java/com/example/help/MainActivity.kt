@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationManager
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         menu = findViewById(R.id.menu)
         sos = findViewById(R.id.help)
 
+
+        val reciever:Reciever = Reciever(this)
+        registerReceiver(reciever, IntentFilter(Intent.ACTION_SCREEN_ON))
+        registerReceiver(reciever, IntentFilter(Intent.ACTION_SCREEN_OFF))
         menu.setOnClickListener {
             startActivity(Intent(this@MainActivity, MenuActivity::class.java))
         }
@@ -97,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkPermission(){
+    fun checkPermission(){
         if ((ActivityCompat.checkSelfPermission(
                 this,
                 android.Manifest.permission.ACCESS_FINE_LOCATION
