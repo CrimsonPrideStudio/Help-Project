@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.help.Database.ContactEntity
@@ -14,6 +15,8 @@ class NumberRecyclerAdaptar(val context: Context,val numberList:List<ContactEnti
         val personNameText:TextView = view.findViewById(R.id.txtname)
         val personIdText:TextView = view.findViewById(R.id.txtId)
         val personNumberText:TextView = view.findViewById(R.id.txtPhoneNumber)
+        val favoriteBtn:Button = view.findViewById(R.id.favourite)
+        val delete:Button = view.findViewById(R.id.delete)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
