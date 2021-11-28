@@ -16,10 +16,76 @@
         android:textAlignment="center"
         android:textColor="#0452D8"
         android:textStyle="bold"
-        android:textSize="15dp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.125"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/point1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="1. Click Register Number and fill the Name and Number of the people you want, Click Add to add the Number."
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        />
+
+        <TextView
+            android:id="@+id/point2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point1"
+            android:layout_margin="20dp"
+            android:text="2. To view the Added Number or Registered Number, Click on View Number ."
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        />
+
+        <TextView
+            android:id="@+id/point3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point2"
+            android:layout_margin="20dp"
+            android:text="3. To Send Custom Messages, Click on Edit Message and write the Message you want to Send."
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        />
+
+        <TextView
+            android:id="@+id/point4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point3"
+            android:layout_margin="20dp"
+            android:text="4. Now you just have to Click the Help Button and the message contained
+        your location will be send to the Number you have registered."
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+        />
+
+        <TextView
+            android:id="@+id/point5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point4"
+            android:layout_margin="20dp"
+            android:text="5. You can Click Three Time the Power Button to Send the help message."
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
