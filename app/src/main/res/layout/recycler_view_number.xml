@@ -59,11 +59,33 @@
 
         </RelativeLayout>
 
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:background="@drawable/ic_view_name" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/favourite"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:background="@drawable/ic_fav_border" />
+
+            <Button
+                android:layout_centerHorizontal="true"
+                android:id="@+id/delete"
+                android:layout_below="@id/favourite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/ic_delete"/>
+
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 
