@@ -16,6 +16,7 @@ class RegisterNumber : AppCompatActivity() {
 lateinit var etName:EditText
 lateinit var etNumber:EditText
 lateinit var registerBtn :Button
+var contactDbList= listOf<ContactEntity>()
 var name:String = "Def"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +26,13 @@ var name:String = "Def"
         registerBtn = findViewById(R.id.addButton)
 
         registerBtn.setOnClickListener {
+        contactDbList = DBAsyncInfo(this).execute().get()
             val contactEntity = ContactEntity(
-                2,
+                contactDbList.size+1,
                 etName.text.toString(),
                 etNumber.text.toString()
             )
+
             if(!DBAsyncTask(this,contactEntity,1).execute().get()){
                 val async = DBAsyncTask(this,contactEntity,2).execute()
                 Log.e("this",contactEntity.toString())
@@ -62,4 +65,13 @@ var name:String = "Def"
         }
 
     }
+    class DBAsyncInfo(val context: Context):
+        AsyncTask<Void, Void, List<ContactEntity>>(){
+
+        override fun doInBackground(vararg params: Void?): List<ContactEntity> {
+            val dbContact = Room.databaseBuilder(context, ContactDatabase::class.java,"Contacts").build()
+            return dbContact.contactDao().getAllContacts()
+        }
+    }
+
 }
