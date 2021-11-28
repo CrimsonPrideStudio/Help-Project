@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:textColor="@color/blue"
+            android:textColor="@color/black"
             android:text="Numbers"
             android:textStyle="bold"
             android:textSize="20dp"
@@ -31,7 +31,8 @@
             android:layout_height="match_parent"
             android:layout_weight="7"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            >
 
             <TextView
                 android:id="@+id/txtname"
@@ -40,7 +41,7 @@
                 android:layout_gravity="center"
                 android:padding="5dp"
                 android:text="Name"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
